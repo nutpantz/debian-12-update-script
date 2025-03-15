@@ -1,5 +1,5 @@
 #!/bin/bash
-
+clear
 # 1APT check
 function apt_updates(){
 	sudo apt update
@@ -83,7 +83,7 @@ done
 if [ -z "$1" ];
 then
      # Wait for user response
-     read -p "Which options 9should be executed?: " selectedOption
+     read -p "9Which options should be executed?: " selectedOption
 else
      # pass parameter to selected option
      selectedOption="$1"
@@ -144,7 +144,7 @@ case $selectedOption in
                
 esac
 
-# Bye, bye!
+# done
 echo -e "\nExecuted ${options[$selectedOption]}\nlooks good? restarting!"
 sleep 10s
 exec $0
